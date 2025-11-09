@@ -35,69 +35,133 @@ This project features separate dashboards for students and instructors, real-tim
 The project is organized in a "monorepo" style with two main folders:
 
 adaptive-learning-app/
+
 |
+
 +-- backend/
+
 |   |
+
 |   +-- middleware/
+
 |   |   +-- auth.js
+
 |   |
+
 |   +-- models/
+
 |   |   +-- Question.js
+
 |   |   +-- StudentProgress.js
+
 |   |   +-- Topic.js
+
 |   |   +-- User.js
+
 |   |
+
 |   +-- routes/
+
 |   |   +-- analytics.js
+
 |   |   +-- auth.js
+
 |   |   +-- content.js
+
 |   |   +-- quiz.js
+
 |   |
+
 |   +-- .env
+
 |   +-- package.json
+
 |   +-- package-lock.json
+
 |   +-- server.js
+
 |
+
 +-- frontend/
+
 |   |
+
 |   +-- public/
+
 |   |   +-- index.html
+
 |   |
+
 |   +-- src/
+
 |   |   |
+
 |   |   +-- components/
+
 |   |   |   +-- instructor/
+
 |   |   |   |   +-- AnalyticsDashboard.js
+
 |   |   |   |   +-- ContentManagement.js
+
 |   |   |   +-- layout/
+
 |   |   |   |   +-- Navbar.js
+
 |   |   |   +-- routing/
+
 |   |   |   |   +-- ProtectedRoute.js
+
 |   |   |   +-- student/
+
 |   |   |       +-- QuizView.js
+
 |   |   |       +-- StudentProgressChart.js
+
 |   |   |
+
 |   |   +-- context/
+
 |   |   |   +-- AuthContext.js
+
 |   |   |
+
 |   |   +-- pages/
+
 |   |   |   +-- InstructorDashboard.js
+
 |   |   |   +-- LoginPage.js
+
 |   |   |   +-- StudentDashboard.js
+
 |   |   |
+
 |   |   +-- utils/
+
 |   |   |   +-- api.js
+
 |   |   |
+
 |   |   +-- App.js
+
 |   |   +-- index.css
+
 |   |   +-- index.js
+
 |   |
+
 |   +-- .env
+
 |   +-- package.json
+
 |   +-- package-lock.json
+
 |
+
 +-- .gitignore
+
 +-- README.md
+
 
 
 ## How to Run This Project Locally
