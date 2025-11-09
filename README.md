@@ -36,26 +36,68 @@ The project is organized in a "monorepo" style with two main folders:
 
 adaptive-learning-app/
 |
-|-- backend/
-|   |-- models/         (Database Schemas for User, Topic, Question, Progress)
-|   |-- routes/         (API Endpoints for auth, content, quiz, analytics)
-|   |-- middleware/     (Auth and role-checking middleware)
-|   |-- server.js       (Main Express server file)
-|   |-- package.json
++-- backend/
+|   |
+|   +-- middleware/
+|   |   +-- auth.js
+|   |
+|   +-- models/
+|   |   +-- Question.js
+|   |   +-- StudentProgress.js
+|   |   +-- Topic.js
+|   |   +-- User.js
+|   |
+|   +-- routes/
+|   |   +-- analytics.js
+|   |   +-- auth.js
+|   |   +-- content.js
+|   |   +-- quiz.js
+|   |
+|   +-- .env
+|   +-- package.json
+|   +-- package-lock.json
+|   +-- server.js
 |
-|-- frontend/
-|   |-- public/         (Contains index.html)
-|   |-- src/
-|   |   |-- components/   (Reusable React components for layout, dashboards, quiz)
-|   |   |-- context/      (AuthContext for global user state)
-|   |   |-- pages/        (Main page components like LoginPage, StudentDashboard)
-|   |   |-- utils/        (api.js helper for Axios)
-|   |   |-- App.js        (Main router setup)
-|   |   |-- index.js      (React entry point)
-|   |-- package.json
++-- frontend/
+|   |
+|   +-- public/
+|   |   +-- index.html
+|   |
+|   +-- src/
+|   |   |
+|   |   +-- components/
+|   |   |   +-- instructor/
+|   |   |   |   +-- AnalyticsDashboard.js
+|   |   |   |   +-- ContentManagement.js
+|   |   |   +-- layout/
+|   |   |   |   +-- Navbar.js
+|   |   |   +-- routing/
+|   |   |   |   +-- ProtectedRoute.js
+|   |   |   +-- student/
+|   |   |       +-- QuizView.js
+|   |   |       +-- StudentProgressChart.js
+|   |   |
+|   |   +-- context/
+|   |   |   +-- AuthContext.js
+|   |   |
+|   |   +-- pages/
+|   |   |   +-- InstructorDashboard.js
+|   |   |   +-- LoginPage.js
+|   |   |   +-- StudentDashboard.js
+|   |   |
+|   |   +-- utils/
+|   |   |   +-- api.js
+|   |   |
+|   |   +-- App.js
+|   |   +-- index.css
+|   |   +-- index.js
+|   |
+|   +-- .env
+|   +-- package.json
+|   +-- package-lock.json
 |
-|-- .gitignore          (Crucial for ignoring node_modules and .env files)
-|-- README.md           (You are here!)
++-- .gitignore
++-- README.md
 
 
 ## How to Run This Project Locally
